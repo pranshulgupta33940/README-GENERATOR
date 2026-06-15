@@ -1,0 +1,3 @@
+# Python dependencies for README generation
+# Main requirements are in python/requirements.txt
+-r python/requirements.txt 

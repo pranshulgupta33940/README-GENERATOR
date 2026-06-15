@@ -1,0 +1,36 @@
+{
+    "name": "readme-generator-monorepo",
+    "version": "1.0.0",
+    "description": "Full-stack README generator with Next.js frontend, Express backend, and Python AI",
+    "scripts": {
+        "dev:frontend": "cd frontend && npm run dev",
+        "dev:backend": "cd backend && npm run dev",
+        "dev:backend-stable": "cd backend && npm run dev-stable",
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev-stable": "concurrently \"npm run dev:backend-stable\" \"npm run dev:frontend\"",
+        "build:frontend": "cd frontend && npm run build",
+        "build:backend": "cd backend && npm run build",
+        "build": "npm run build:backend && npm run build:frontend",
+        "start:frontend": "cd frontend && npm start",
+        "start:backend": "cd backend && npm start",
+        "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.19",
+        "concurrently": "^7.6.0"
+    },
+    "keywords": [
+        "readme",
+        "generator",
+        "ai",
+        "github",
+        "documentation"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@vercel/analytics": "^1.5.0",
+        "cors": "^2.8.5",
+        "mongoose": "^8.17.0"
+    }
+}
