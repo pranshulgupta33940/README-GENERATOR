@@ -5,7 +5,7 @@ echo "Starting Render build process..."
 
 # Install Node.js dependencies
 echo "Installing Node.js dependencies..."
-npm install
+npm install --include=dev
 
 # Build TypeScript (directly call tsc to avoid circular reference)
 echo "Building TypeScript..."
