@@ -11,7 +11,7 @@
 
 ---
 
-## 🚀 The Problem & The Solution
+##  The Problem & The Solution
 
 **The Problem:** Developers hate writing documentation. Great projects die because no one knows how to use them, but writing a good README manually takes hours of agonizing over structure and formatting.
 
@@ -20,13 +20,13 @@
 <br>
 
 <details>
-<summary><b>✨ Click here to see Core Features</b></summary>
+<summary><b> Click here to see Core Features</b></summary>
 <br>
 
-- 🧠 **Multi-Agent AI Pipeline**: Doesn't just dump code into an LLM. It intelligently filters noise, selects architecturally significant files, chunks them, and synthesizes them.
-- ⚡ **Real-Time Streaming UX**: Uses Server-Sent Events (SSE) to stream live terminal logs from the Python engine to the Next.js frontend. No boring loading spinners.
-- 🛡️ **Bulletproof LLM Fallback**: Built-in fallback manager gracefully handles rate limits by rotating through multiple Groq API keys and falling back to Google Gemini, guaranteeing 99% uptime.
-- 💅 **"Godmode" Aesthetic**: Stunning UI built with Tailwind CSS, Framer Motion, and Aceternity components.
+-  **Multi-Agent AI Pipeline**: Doesn't just dump code into an LLM. It intelligently filters noise, selects architecturally significant files, chunks them, and synthesizes them.
+-  **Real-Time Streaming UX**: Uses Server-Sent Events (SSE) to stream live terminal logs from the Python engine to the Next.js frontend. No boring loading spinners.
+-  **Bulletproof LLM Fallback**: Built-in fallback manager gracefully handles rate limits by rotating through multiple Groq API keys and falling back to Google Gemini, guaranteeing 99% uptime.
+-  **"Godmode" Aesthetic**: Stunning UI built with Tailwind CSS, Framer Motion, and Aceternity components.
 
 </details>
 
@@ -38,7 +38,7 @@ The system is built as a hybrid monorepo, decoupling the high-performance fronte
 
 ```mermaid
 graph TD;
-    User[👤 User] -->|Provides GitHub Link| Frontend;
+    User[ User] -->|Provides GitHub Link| Frontend;
     
     subgraph Vercel [Frontend Layer]
         Frontend[Next.js 15 UI]
@@ -64,7 +64,7 @@ graph TD;
 
 ---
 
-## 💻 Getting Started (Local Setup)
+##  Getting Started (Local Setup)
 
 To run this project locally, ensure you have **Node.js 18+**, **Python 3.10+**, and **Git** installed on your machine.
 
@@ -120,7 +120,7 @@ README-GENERATOR/
 
 ---
 
-## ⚡ What We Learned Building This
+##  What We Learned Building This
 
 1. **AI Engineering is 80% Error Handling:** Making an API call is easy. Building a system that survives rate limits, context window overflows, and network blips is incredibly hard. Our `llm_fallback.py` was born from this necessity.
 2. **UX Bridges the Latency Gap:** Generating a README for a massive codebase takes 30-60 seconds. By streaming real-time terminal logs via SSE, we turned a "slow loading time" into an engaging, hacker-like experience.
