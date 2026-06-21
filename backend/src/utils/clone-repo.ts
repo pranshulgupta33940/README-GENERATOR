@@ -5,5 +5,5 @@ export const cloneRepo = async (
   destinationPath: string
 ): Promise<void> => {
   const git = simpleGit();
-  await git.clone(repoUrl, destinationPath);
+  await git.clone(repoUrl, destinationPath, ["--depth", "1"]);
 };

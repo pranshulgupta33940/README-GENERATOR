@@ -34,12 +34,7 @@ app.use(
         "http://127.0.0.1:3001",
         "http://127.0.0.1:3002",
         "http://127.0.0.1:3003",
-        "https://readme-generator-phi.vercel.app",
-        "https://readme-generator-hxr6.onrender.com",
-        "https://readmeai.tech",
-        "http://readmeai.tech",
-        "https://www.readmeai.tech",
-        "http://www.readmeai.tech",
+        "https://readme-generator-six-puce.vercel.app",
       ];
 
       // Allow FRONTEND_URL from environment variable

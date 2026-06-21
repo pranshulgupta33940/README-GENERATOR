@@ -90,9 +90,25 @@ export default function GeneratorPage() {
           });
         }
 
-        // If stream ended without explicit [DONE], mark as completed if we have content
+        // If stream ended without explicit [DONE], check if we actually got content
         setStatus((prev) => {
-          if (prev === "generating") return "completed";
+          if (prev === "generating") {
+            // Stream ended while still generating — likely backend crashed
+            setReadmeContent((content) => {
+              if (!content) {
+                setLogs((prevLogs) => [
+                  ...prevLogs,
+                  "❌ Connection lost — the server may have run out of memory. Try a smaller repository.",
+                ]);
+                toast.error(
+                  "Connection lost. The repository may be too large for the server."
+                );
+                return content;
+              }
+              return content;
+            });
+            return "error";
+          }
           return prev;
         });
       } catch (err: unknown) {
